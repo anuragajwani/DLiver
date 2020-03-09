@@ -18,9 +18,11 @@
 		1B173995232CF07400E4BA4E /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B173994232CF07400E4BA4E /* RestaurantTableViewCell.swift */; };
 		1BE1862B232EA3BB005337FE /* LoadingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE1862A232EA3BB005337FE /* LoadingTableViewCell.swift */; };
 		7FA96389236777B60031BC79 /* restaurants.json in Resources */ = {isa = PBXBuildFile; fileRef = 7FA96388236777B60031BC79 /* restaurants.json */; };
+		80ADBA3B57458D5E9444A775 /* Pods_DLiver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 349D711D5742159C163F13F6 /* Pods_DLiver.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		088A112E307B0040A72A7B8C /* Pods-DLiver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DLiver.release.xcconfig"; path = "Target Support Files/Pods-DLiver/Pods-DLiver.release.xcconfig"; sourceTree = "<group>"; };
 		1B173979232AE2CB00E4BA4E /* DLiver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DLiver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B17397C232AE2CB00E4BA4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B17397E232AE2CB00E4BA4E /* RestaurantListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListTableViewController.swift; sourceTree = "<group>"; };
@@ -33,7 +35,9 @@
 		1B173992232AE72A00E4BA4E /* Cuisine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cuisine.swift; sourceTree = "<group>"; };
 		1B173994232CF07400E4BA4E /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
 		1BE1862A232EA3BB005337FE /* LoadingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingTableViewCell.swift; sourceTree = "<group>"; };
+		349D711D5742159C163F13F6 /* Pods_DLiver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DLiver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FA96388236777B60031BC79 /* restaurants.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = restaurants.json; sourceTree = "<group>"; };
+		D7E7E0F96C4F3CF17A4F88A2 /* Pods-DLiver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DLiver.debug.xcconfig"; path = "Target Support Files/Pods-DLiver/Pods-DLiver.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80ADBA3B57458D5E9444A775 /* Pods_DLiver.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +57,8 @@
 			children = (
 				1B17397B232AE2CB00E4BA4E /* DLiver */,
 				1B17397A232AE2CB00E4BA4E /* Products */,
+				C94C32B8047D146297E0BC4C /* Pods */,
+				8907591B5A2AF0CA6706BB05 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,6 +89,24 @@
 			path = DLiver;
 			sourceTree = "<group>";
 		};
+		8907591B5A2AF0CA6706BB05 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				349D711D5742159C163F13F6 /* Pods_DLiver.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C94C32B8047D146297E0BC4C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D7E7E0F96C4F3CF17A4F88A2 /* Pods-DLiver.debug.xcconfig */,
+				088A112E307B0040A72A7B8C /* Pods-DLiver.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -89,9 +114,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1B17398B232AE2CD00E4BA4E /* Build configuration list for PBXNativeTarget "DLiver" */;
 			buildPhases = (
+				7232888B460F718DF69BD77C /* [CP] Check Pods Manifest.lock */,
 				1B173975232AE2CB00E4BA4E /* Sources */,
 				1B173976232AE2CB00E4BA4E /* Frameworks */,
 				1B173977232AE2CB00E4BA4E /* Resources */,
+				0FCA10FB88B5798419DC35F0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -148,6 +175,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0FCA10FB88B5798419DC35F0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DLiver/Pods-DLiver-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DLiver/Pods-DLiver-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DLiver/Pods-DLiver-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7232888B460F718DF69BD77C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DLiver-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1B173975232AE2CB00E4BA4E /* Sources */ = {
@@ -304,6 +373,7 @@
 		};
 		1B17398C232AE2CD00E4BA4E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7E7E0F96C4F3CF17A4F88A2 /* Pods-DLiver.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -322,6 +392,7 @@
 		};
 		1B17398D232AE2CD00E4BA4E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 088A112E307B0040A72A7B8C /* Pods-DLiver.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
