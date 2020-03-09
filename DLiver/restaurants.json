@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Lucky Ate",
+        "cuisines": [
+            "Chineese",
+            "Oriental"
+        ]
+    },
+    {
+        "name": "The Mona Pizza",
+        "cuisines": [
+            "Pizza",
+            "Italian"
+        ]
+    },
+    {
+        "name": "TACOast",
+        "cuisines": [
+            "Mexican"
+        ]
+    }
+]
