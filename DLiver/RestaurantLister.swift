@@ -8,7 +8,11 @@
 
 import Foundation
 
-class RestaurantLister {
+protocol RestaurantLister {
+    func get(onCompletion: @escaping ([Restaurant]) -> ())
+}
+
+class ServerRestaurantLister: RestaurantLister {
     
     func get(onCompletion: @escaping ([Restaurant]) -> ()) {
         

@@ -10,7 +10,7 @@ import UIKit
 
 class RestaurantListTableViewController: UITableViewController {
     
-    private let restaurantLister = RestaurantLister()
+    private let restaurantLister: RestaurantLister = ServerRestaurantLister()
     private var restuarants: [Restaurant]? {
         didSet {
             self.tableView.reloadData()
