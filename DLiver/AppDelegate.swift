@@ -8,6 +8,7 @@
 
 import UIKit
 import Swinject
+import SwinjectStoryboard
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,9 +18,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         self.registerDependencies()
-        let navigationController = self.window?.rootViewController as? UINavigationController
-        let restaurantListViewController = navigationController?.viewControllers[0] as? RestaurantListTableViewController
-        restaurantListViewController?.restaurantLister = container.resolve(RestaurantLister.self)
+        self.injectDependencies()
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        window.makeKeyAndVisible()
+        self.window = window
+        let swinjectStoryboard = SwinjectStoryboard.create(name: "Main", bundle: nil, container: self.container)
+        window.rootViewController = swinjectStoryboard.instantiateInitialViewController()
         return true
     }
 
@@ -27,6 +31,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.container.register(RestaurantLister.self, factory: { resolver in
             return ServerRestaurantLister()
         })
+    }
+    
+    private func injectDependencies() {
+        self.container.storyboardInitCompleted(RestaurantListTableViewController.self) { (resolver, viewController) in
+            viewController.restaurantLister = resolver.resolve(RestaurantLister.self)
+        }
     }
 }
 
